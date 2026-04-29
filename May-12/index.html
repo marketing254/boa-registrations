@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How to Hire &amp; Retain Top Aesthetic Talent | Business of Aesthetics | May 12, 2026</title>
+<meta name="description" content="Free live expert panel for aesthetic practice owners. Learn how to attract, hire, and retain top aesthetic talent in today's seller's market. May 12, 2026, 8:00 PM EST." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy-900: #0B1733;
+    --navy-800: #101E42;
+    --navy-700: #162957;
+    --navy-600: #1E3670;
+    --teal: #2DB8B0;
+    --teal-dark: #1F8E88;
+    --gold: #D4A574;
+    --gold-light: #EBC89A;
+    --cream: #F7F3EC;
+    --text: #E7ECF5;
+    --muted: #8E9BB8;
+    --white: #ffffff;
+    --danger: #E26A6A;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--navy-900);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* ── BOA NAVBAR ─────────────────────────────────────────── */
+  .boa-nav {
+    background: #fff;
+    border-bottom: 3px solid var(--teal);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+  .boa-nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    gap: 20px;
+  }
+  .boa-nav-logo img {
+    height: 68px;
+    width: auto;
+    display: block;
+  }
+  .boa-nav-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3px;
+  }
+  .boa-nav-title .nav-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--teal);
+  }
+  .boa-nav-title .nav-heading {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1d3461;
+    letter-spacing: 0.2px;
+    line-height: 1.2;
+  }
+  .boa-nav-title .nav-divider {
+    width: 48px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--teal), #D4A563);
+    border-radius: 2px;
+    align-self: flex-end;
+  }
+  @media (max-width: 640px) {
+    .boa-nav-title .nav-heading { font-size: 15px; }
+    .boa-nav-title .nav-eyebrow { font-size: 10px; }
+  }
+
+  /* ── HERO ───────────────────────────────────────────────── */
+  .hero {
+    position: relative;
+    padding: 70px 0 90px;
+    background:
+      radial-gradient(ellipse 80% 60% at 15% 0%, rgba(45,184,176,0.12), transparent 60%),
+      radial-gradient(ellipse 70% 50% at 90% 20%, rgba(212,165,116,0.08), transparent 60%),
+      linear-gradient(180deg, var(--navy-900) 0%, var(--navy-800) 100%);
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 25% 80%, rgba(45,184,176,0.08), transparent 40%),
+      radial-gradient(circle at 80% 60%, rgba(212,165,116,0.05), transparent 40%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr;
+    gap: 60px;
+    align-items: start;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Badges */
+  .badges { display: flex; gap: 10px; margin-bottom: 28px; flex-wrap: wrap; }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    border: 1px solid rgba(226,106,106,0.35);
+    color: #F5B5B5;
+    background: rgba(226,106,106,0.10);
+  }
+  .badge.teal {
+    border-color: rgba(45,184,176,0.4);
+    color: var(--teal);
+    background: rgba(45,184,176,0.08);
+  }
+  .badge .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #E26A6A;
+    box-shadow: 0 0 0 0 rgba(226,106,106,0.6);
+    animation: pulse 1.6s infinite;
+  }
+  @keyframes pulse {
+    0%   { box-shadow: 0 0 0 0   rgba(226,106,106,0.7); }
+    70%  { box-shadow: 0 0 0 10px rgba(226,106,106,0);   }
+    100% { box-shadow: 0 0 0 0   rgba(226,106,106,0);   }
+  }
+
+  h1.hero-title {
+    font-size: 50px;
+    line-height: 1.08;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.5px;
+    margin-bottom: 22px;
+  }
+  h1.hero-title .accent {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+    color: var(--gold);
+    display: inline;
+  }
+  .hero-sub {
+    font-size: 17px;
+    color: #B9C3D9;
+    max-width: 560px;
+    margin-bottom: 32px;
+    line-height: 1.65;
+  }
+
+  /* Meta row */
+  .meta-row {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 32px;
+    margin-bottom: 28px;
+  }
+  .meta-item { display: flex; gap: 12px; align-items: flex-start; }
+  .meta-icon {
+    width: 36px; height: 36px;
+    border-radius: 10px;
+    background: rgba(45,184,176,0.12);
+    border: 1px solid rgba(45,184,176,0.25);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--teal);
+    flex-shrink: 0;
+  }
+  .meta-label {
+    font-size: 11px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .meta-value {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+
+  /* Countdown */
+  .countdown { display: flex; gap: 12px; margin-top: 10px; }
+  .cd-box {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px;
+    padding: 14px 18px;
+    min-width: 70px;
+    text-align: center;
+  }
+  .cd-num {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .cd-label {
+    font-size: 10px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 6px;
+    font-weight: 600;
+  }
+
+  /* Registration card */
+  .reg-card {
+    background: linear-gradient(180deg, #FDFBF7 0%, #F7F3EC 100%);
+    border-radius: 18px;
+    padding: 34px 32px 30px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.05);
+    position: relative;
+    color: #1A2B4A;
+  }
+  .reg-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 5px;
+    background: linear-gradient(90deg, var(--teal) 0%, var(--gold) 100%);
+    border-radius: 18px 18px 0 0;
+  }
+  .reg-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(212,165,116,0.18);
+    color: #8B5A1E;
+    border: 1px solid rgba(212,165,116,0.4);
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .reg-title {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--navy-900);
+    margin-bottom: 6px;
+  }
+  .reg-sub {
+    font-size: 14px;
+    color: #4a5774;
+    margin-bottom: 18px;
+  }
+  form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+  form .field { margin-bottom: 14px; }
+  form label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #4a5774;
+    margin-bottom: 6px;
+  }
+  form label .req { color: var(--danger); }
+  form input, form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1.5px solid #D9CFBF;
+    background: #fff;
+    font-size: 14px;
+    font-family: inherit;
+    color: #1A2B4A;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  form input:focus, form textarea:focus {
+    outline: none;
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(45,184,176,0.15);
+  }
+  form textarea { resize: vertical; min-height: 80px; }
+  .cta-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+    color: #fff;
+    border: none;
+    padding: 16px 20px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    margin-top: 6px;
+    box-shadow: 0 10px 30px rgba(45,184,176,0.35);
+    transition: transform 0.15s, box-shadow 0.15s;
+    font-family: inherit;
+  }
+  .cta-btn:hover { transform: translateY(-1px); box-shadow: 0 14px 36px rgba(45,184,176,0.45); }
+  .form-secure {
+    text-align: center;
+    font-size: 11px;
+    color: #8A94A8;
+    margin-top: 12px;
+    margin-bottom: 14px;
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+  }
+
+  /* ── SECTIONS ───────────────────────────────────────────── */
+  section.band { padding: 90px 0; position: relative; }
+  section.band.alt { background: var(--navy-800); }
+
+  .section-eyebrow {
+    font-size: 12px;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: var(--teal);
+    font-weight: 700;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+  .section-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+  .section-title .accent {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+    color: var(--gold);
+  }
+  .section-intro {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 56px;
+    color: #B9C3D9;
+    font-size: 16px;
+  }
+
+  /* ── SPEAKERS ───────────────────────────────────────────── */
+  .panel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .speaker {
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    padding: 28px 24px;
+    text-align: center;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .speaker:hover { transform: translateY(-4px); border-color: rgba(45,184,176,0.35); }
+  .sp-photo {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--teal), var(--navy-700));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    color: #fff;
+    border: 3px solid rgba(212,165,116,0.5);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    overflow: hidden;
+  }
+  .sp-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+  .sp-name { font-size: 19px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+  .sp-title {
+    font-size: 12px;
+    color: var(--teal);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 14px;
+    min-height: 32px;
+    line-height: 1.4;
+  }
+  .sp-bio { font-size: 13px; color: #9EABC4; line-height: 1.55; }
+
+  /* ── DISCUSSION POINTS ──────────────────────────────────── */
+  .learn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .learn-item {
+    display: flex;
+    gap: 16px;
+    padding: 22px 24px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 14px;
+    align-items: flex-start;
+  }
+  .learn-num {
+    flex-shrink: 0;
+    width: 38px; height: 38px;
+    border-radius: 10px;
+    background: rgba(212,165,116,0.15);
+    border: 1px solid rgba(212,165,116,0.4);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+    color: var(--gold);
+    font-size: 18px;
+  }
+  .learn-text { font-size: 15px; color: #CDD5E8; line-height: 1.55; }
+
+  /* ── ABOUT BAND ─────────────────────────────────────────── */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+  .about-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    letter-spacing: -0.3px;
+  }
+  .about-title .accent {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--gold);
+  }
+  .about-copy { font-size: 15px; color: #B9C3D9; line-height: 1.75; margin-bottom: 14px; }
+  .who-for {
+    background: linear-gradient(135deg, rgba(45,184,176,0.08), rgba(45,184,176,0.02));
+    border: 1px solid rgba(45,184,176,0.25);
+    border-radius: 16px;
+    padding: 28px 30px;
+  }
+  .who-for h4 {
+    font-size: 13px;
+    color: var(--teal);
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .who-for ul { list-style: none; }
+  .who-for li {
+    padding: 8px 0 8px 26px;
+    position: relative;
+    color: #DDE3F1;
+    font-size: 14px;
+  }
+  .who-for li::before { content: '✦'; position: absolute; left: 0; top: 8px; color: var(--gold); }
+
+  /* ── CTA BAND ───────────────────────────────────────────── */
+  .cta-band {
+    padding: 80px 0;
+    background:
+      radial-gradient(ellipse at center, rgba(45,184,176,0.18), transparent 60%),
+      var(--navy-900);
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .cta-band h3 {
+    font-size: 38px; font-weight: 800; color: #fff;
+    margin-bottom: 14px; line-height: 1.15;
+  }
+  .cta-band h3 .accent {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--gold);
+  }
+  .cta-band p { color: #B9C3D9; margin-bottom: 30px; font-size: 16px; }
+  .cta-link {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+    color: #fff;
+    text-decoration: none;
+    padding: 18px 42px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    box-shadow: 0 14px 40px rgba(45,184,176,0.35);
+    transition: transform 0.15s;
+  }
+  .cta-link:hover { transform: translateY(-2px); }
+
+  /* ── FOOTER ─────────────────────────────────────────────── */
+  footer {
+    background: var(--navy-900);
+    padding: 40px 0 30px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  footer .foot-logo {
+    font-weight: 800; color: var(--teal);
+    letter-spacing: 1px; text-transform: uppercase;
+    font-size: 14px; margin-bottom: 8px;
+  }
+  footer a { color: var(--teal); text-decoration: none; }
+
+  /* ── RESPONSIVE ─────────────────────────────────────────── */
+  @media (max-width: 960px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    h1.hero-title { font-size: 38px; }
+    .section-title { font-size: 30px; }
+    .panel-grid { grid-template-columns: repeat(2, 1fr); max-width: 640px; }
+    .learn-grid { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; gap: 30px; }
+    .meta-row { grid-template-columns: 1fr; gap: 16px; }
+    section.band { padding: 60px 0; }
+    .hero { padding: 50px 0 60px; }
+  }
+  @media (max-width: 560px) {
+    .panel-grid { grid-template-columns: 1fr; max-width: 100%; }
+    h1.hero-title { font-size: 30px; }
+    .cd-box { min-width: 60px; padding: 12px 10px; }
+    .cd-num { font-size: 22px; }
+    form .row { grid-template-columns: 1fr; }
+    .cta-band h3 { font-size: 26px; }
+    .about-title { font-size: 26px; }
+  }
+</style>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wcx3t8oxu2");
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FM8Q2GSZS6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FM8Q2GSZS6');
+</script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="boa-nav">
+  <div class="wrap boa-nav-inner">
+    <a href="https://www.businessofaesthetics.org/" class="boa-nav-logo">
+      <img src="../images/BOA%20Logo%20(3).png" alt="Business of Aesthetics" />
+    </a>
+    <div class="boa-nav-title">
+      <span class="nav-eyebrow">Business of Aesthetics</span>
+      <span class="nav-heading">Expert Panel Webinar</span>
+      <div class="nav-divider"></div>
+    </div>
+  </div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+
+    <!-- LEFT: Title + meta -->
+    <div>
+      <div class="badges">
+        <span class="badge"><span class="dot"></span> LIVE WEBINAR</span>
+        <span class="badge teal">👥 3-Speaker Expert Panel</span>
+      </div>
+
+      <h1 class="hero-title">
+        How to Hire &amp; Retain<br>
+        <span class="accent">Top Aesthetic Talent</span><br>
+        in Today's Seller's Market
+      </h1>
+
+      <p class="hero-sub">
+        The talent shortage in medical aesthetics isn't a temporary disruption — it's the new operating environment. This panel gives aesthetic practice owners a role-specific, practical system for attracting, selecting, and retaining the people who make or break the patient experience.
+      </p>
+
+      <div class="meta-row">
+        <div class="meta-item">
+          <div class="meta-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div>
+            <div class="meta-label">Date</div>
+            <div class="meta-value">Tuesday, May 12, 2026</div>
+          </div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="meta-label">Time</div>
+            <div class="meta-value">8:00 – 9:00 PM EST</div>
+          </div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          </div>
+          <div>
+            <div class="meta-label">Format</div>
+            <div class="meta-value">Live Zoom Panel + Q&amp;A</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="countdown" id="countdown">
+        <div class="cd-box"><div class="cd-num" id="cd-d">--</div><div class="cd-label">Days</div></div>
+        <div class="cd-box"><div class="cd-num" id="cd-h">--</div><div class="cd-label">Hours</div></div>
+        <div class="cd-box"><div class="cd-num" id="cd-m">--</div><div class="cd-label">Mins</div></div>
+        <div class="cd-box"><div class="cd-num" id="cd-s">--</div><div class="cd-label">Secs</div></div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Registration -->
+    <div class="reg-card" id="register">
+      <div class="reg-badge">⚡ Limited Seats Available</div>
+      <div class="reg-title">Reserve Your Spot</div>
+      <div class="reg-sub">Free to attend · Replay sent to all registrants</div>
+
+      <form id="reg-form" novalidate>
+        <input type="hidden" name="event_key" value="event_2026_05_12" />
+        <div class="row">
+          <div>
+            <label>First Name <span class="req">*</span></label>
+            <input type="text" name="first_name" placeholder="First name" autocomplete="given-name" required />
+          </div>
+          <div>
+            <label>Last Name <span class="req">*</span></label>
+            <input type="text" name="last_name" placeholder="Last name" autocomplete="family-name" required />
+          </div>
+        </div>
+        <div class="field">
+          <label>Email Address <span class="req">*</span></label>
+          <input type="email" name="email" placeholder="you@yourpractice.com" autocomplete="email" required />
+        </div>
+        <div class="field">
+          <label>Mobile Number <span class="req">*</span></label>
+          <input type="tel" name="phone" placeholder="+1 (555) 123-4567" autocomplete="tel" required />
+        </div>
+        <div class="field">
+          <label>What questions do you have? <span style="color:#8A94A8;font-weight:400;">(optional)</span></label>
+          <textarea name="questions" placeholder="Share any questions you'd like the panel to address…"></textarea>
+        </div>
+        <div class="form-secure">🔒 Your information is secure. We will only contact you about this event and relevant updates.</div>
+        <button type="submit" class="cta-btn" id="reg-btn">Register Free — Save My Seat →</button>
+        <div id="reg-msg" style="display:none;margin-top:14px;padding:12px 16px;border-radius:10px;font-size:14px;font-weight:600;text-align:center;"></div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ABOUT THE SESSION -->
+<section class="band alt">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <div class="section-eyebrow" style="text-align:left;">About The Session</div>
+        <h2 class="about-title">
+          Hiring is harder than ever — and <span class="accent">your team decides your ceiling</span>
+        </h2>
+        <p class="about-copy">
+          Aesthetic practices that struggle to hire and keep great people face a direct revenue and growth ceiling. Open roles stay open longer, training cycles repeat, and the patient experience suffers.
+        </p>
+        <p class="about-copy">
+          This panel breaks down what's structurally changed in the aesthetic talent market, what top performers are actually looking for in 2026, and how to build a hiring and retention system that protects both your culture and your bottom line.
+        </p>
+      </div>
+      <div class="who-for">
+        <h4>Ideal For</h4>
+        <ul>
+          <li>Aesthetic practice owners &amp; medical directors</li>
+          <li>MedSpa founders &amp; operators</li>
+          <li>Practice managers responsible for hiring</li>
+          <li>Multi-location groups scaling clinical teams</li>
+          <li>Anyone losing top candidates to better-positioned competitors</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- MEET THE PANEL -->
+<section class="band">
+  <div class="wrap">
+    <div class="section-eyebrow">Meet Your Expert Panel</div>
+    <h2 class="section-title">Three Leaders, <span class="accent">One Powerful</span> Conversation</h2>
+    <p class="section-intro">Each panelist brings hands-on experience across aesthetic practice operations, recruiting, and growth — from boutique medical recruiting to multi-location MedSpa exits and healthcare investment banking.</p>
+
+    <div class="panel-grid">
+
+      <!-- Speaker 1: Ben Hernandez -->
+      <div class="speaker">
+        <div class="sp-photo">
+          <img src="Ben.jpeg" alt="Ben Hernandez" />
+        </div>
+        <div class="sp-name">Ben Hernandez</div>
+        <div class="sp-title">Founder &amp; CEO, Skytale Group</div>
+        <p class="sp-bio">Founder, CEO and Managing Director of Skytale Group — an investment banking, management consulting, and private capital firm focused on healthcare and consumer businesses. Previously worked at an international investment bank, a hedge fund, and a healthcare-focused advisory firm. B.B.A. in Finance (Texas A&amp;M) and MBA (SMU Cox).</p>
+      </div>
+
+      <!-- Speaker 2: Courtney Anderson -->
+      <div class="speaker">
+        <div class="sp-photo">
+          <img src="Courtney.jpg" alt="Courtney Anderson" />
+        </div>
+        <div class="sp-name">Courtney Anderson</div>
+        <div class="sp-title">VP of Trainings &amp; Charity Initiatives, The Injector Collective</div>
+        <p class="sp-bio">Entrepreneur and respected industry leader. Founder of Spa Trouvé — grown to six Utah locations before selling in 2024. Entrepreneur of the Year regional finalist and AmSpa speaker, passionate about overseeing injection trainings and empowering others to succeed.</p>
+      </div>
+
+      <!-- Speaker 3: Stephanie Lenard -->
+      <div class="speaker">
+        <div class="sp-photo">
+          <img src="Stephanie.jpeg" alt="Stephanie Lenard" />
+        </div>
+        <div class="sp-name">Stephanie Lenard</div>
+        <div class="sp-title">Founder, Match it MD Medical Recruiting</div>
+        <p class="sp-bio">Founder of Match it MD, a boutique recruiting firm focused on medical aesthetics. Former nurse turned sales and marketing leader with experience in EMR and healthcare growth strategy — helping practices build high-performing teams and drive sustainable growth through strategic hiring and partnerships.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- KEY DISCUSSION POINTS -->
+<section class="band alt">
+  <div class="wrap">
+    <div class="section-eyebrow">Key Discussion Points</div>
+    <h2 class="section-title">What You'll <span class="accent">Learn</span></h2>
+    <p class="section-intro">Four focused themes our panel will unpack live — with time for your own questions during moderated Q&amp;A.</p>
+
+    <div class="learn-grid">
+      <div class="learn-item">
+        <div class="learn-num">1</div>
+        <div class="learn-text">Why hiring in medical aesthetics has become harder — and what's structurally changed about the talent market</div>
+      </div>
+      <div class="learn-item">
+        <div class="learn-num">2</div>
+        <div class="learn-text">What top talent actually looks for in 2026 — and how to write job postings that attract them</div>
+      </div>
+      <div class="learn-item">
+        <div class="learn-num">3</div>
+        <div class="learn-text">How to build a hiring process that evaluates both skill and culture fit with confidence</div>
+      </div>
+      <div class="learn-item">
+        <div class="learn-num">4</div>
+        <div class="learn-text">Retention strategies that reduce turnover and keep your best people invested for the long run</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="wrap">
+    <h3>Save Your Seat For <span class="accent">May 12th</span></h3>
+    <p>Free registration. Live Q&amp;A. Replay included.</p>
+    <a href="#register" class="cta-link">Reserve My Spot →</a>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-logo">Business of Aesthetics</div>
+    <div>Your Success Matters!</div>
+    <div style="margin-top:16px;opacity:0.7;">© 2026 Business of Aesthetics. All rights reserved.</div>
+  </div>
+</footer>
+
+
+<script>
+  // ── AppScript URL — paste deployed BOA master script web app URL ───
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxRuoBr8qUaBXwrwXgLwZSq-rVTS1aeeGDaR89F0zc2gx4M9c6dSaU4aGvxJCUxtGA7/exec';
+  const EVENT_KEY = 'event_2026_05_12';
+  const LOCAL_TEST_MODE = APPS_SCRIPT_URL.startsWith('REPLACE');
+
+  document.getElementById('reg-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn  = document.getElementById('reg-btn');
+    const msg  = document.getElementById('reg-msg');
+
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+
+    const source_id = new URLSearchParams(window.location.search).get('s') || '';
+
+    const data = {
+      event_key:   form.event_key.value.trim() || EVENT_KEY,
+      first_name:  form.first_name.value.trim(),
+      last_name:   form.last_name.value.trim(),
+      email:       form.email.value.trim(),
+      phone:       form.phone.value.trim(),
+      questions:   form.questions.value.trim(),
+      source_id:   source_id,
+      source_name: '',
+    };
+
+    btn.disabled    = true;
+    btn.textContent = 'Registering…';
+    msg.style.display = 'none';
+
+    if (LOCAL_TEST_MODE) {
+      console.log('%c[LOCAL TEST] Payload:', 'color:#2DB8B0;font-weight:bold;', data);
+      setTimeout(() => {
+        msg.style.cssText = 'display:block;margin-top:14px;padding:12px 16px;border-radius:10px;font-size:14px;font-weight:600;text-align:center;background:#d4edda;color:#155724;border:1px solid #c3e6cb;';
+        msg.textContent = '✓ [TEST] Payload captured — check browser console.';
+        btn.disabled    = false;
+        btn.textContent = 'Register Free — Save My Seat →';
+        form.reset();
+      }, 800);
+      return;
+    }
+
+    try {
+      await fetch(APPS_SCRIPT_URL, {
+        method:  'POST',
+        mode:    'no-cors',
+        headers: { 'Content-Type': 'text/plain' },
+        body:    JSON.stringify(data),
+      });
+      form.querySelectorAll('input, textarea').forEach(i => i.disabled = true);
+      btn.disabled    = true;
+      btn.textContent = '✓ You\'re Registered!';
+      btn.style.background = 'linear-gradient(135deg, #28a745, #1e7e34)';
+      btn.style.boxShadow  = '0 10px 30px rgba(40,167,69,0.35)';
+      msg.style.cssText = 'display:block;margin-top:14px;padding:12px 16px;border-radius:10px;font-size:14px;font-weight:600;text-align:center;background:#d4edda;color:#155724;border:1px solid #c3e6cb;';
+      msg.textContent = 'You\'re all set! Check your email for the Zoom confirmation link.';
+    } catch (err) {
+      msg.style.cssText = 'display:block;margin-top:14px;padding:12px 16px;border-radius:10px;font-size:14px;font-weight:600;text-align:center;background:#f8d7da;color:#721c24;border:1px solid #f5c6cb;';
+      msg.textContent = 'Something went wrong. Please try again or email us directly.';
+      console.error('Registration error:', err);
+      btn.disabled    = false;
+      btn.textContent = 'Register Free — Save My Seat →';
+    }
+  });
+
+  // ── COUNTDOWN — May 12, 2026 8:00 PM EDT (UTC-4) = May 13 00:00 UTC ──
+  const target = new Date('2026-05-13T00:00:00Z').getTime();
+  function tick() {
+    const diff = Math.max(0, target - Date.now());
+    const d = Math.floor(diff / (1000*60*60*24));
+    const h = Math.floor((diff / (1000*60*60)) % 24);
+    const m = Math.floor((diff / (1000*60)) % 60);
+    const s = Math.floor((diff / 1000) % 60);
+    document.getElementById('cd-d').textContent = String(d).padStart(2,'0');
+    document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
+    document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
+    document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  // ── GA4 referral tracking ──────────────────────────────────────────
+  const _s = new URLSearchParams(window.location.search).get('s');
+  if (_s && typeof gtag === 'function') {
+    gtag('event', 'referral_visit', { source_id: _s });
+  }
+</script>
+
+</body>
+</html>
