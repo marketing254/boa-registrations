@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Aesthetic Owner Bottleneck | Business of Aesthetics | July 7, 2026</title>
+<meta name="description" content="Free live expert panel for aesthetic practice owners. Learn how to identify when you are the bottleneck, what to delegate first, and how to build systems that let your practice grow beyond you. July 7, 2026, 8:00 PM EST." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:        #060E24;
+    --ink-800:    #0B1832;
+    --ink-700:    #102040;
+    --teal:       #29B5AD;
+    --teal-deep:  #1A8882;
+    --gold:       #C49660;
+    --cream:      #FAF7F2;
+    --cream-hero: #FDFAF6;
+    --cream-2:    #E6DED2;
+    --dark-text:  #192840;
+    --mid-text:   #4A5A74;
+    --muted:      #7E90AE;
+    --white:      #fff;
+    --red:        #D95050;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: var(--ink); color: #C4D0E6; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 36px; }
+
+  /* ── NAV ── */
+  .nav { background: #fff; border-bottom: 3px solid var(--teal); position: sticky; top: 0; z-index: 200; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+  .nav .wrap { display: flex; align-items: center; justify-content: space-between; padding-top: 10px; padding-bottom: 10px; }
+  .nav-logo img { height: 66px; display: block; width: auto; }
+  .nav-id { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+  .nav-id .e { font-size: 10.5px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--teal); }
+  .nav-id .h { font-family: 'Playfair Display', serif; font-style: italic; font-size: 19px; font-weight: 700; color: #1C3060; }
+  .nav-id .b { width: 44px; height: 2px; background: linear-gradient(90deg, var(--teal), var(--gold)); border-radius: 2px; }
+
+  /* ── HERO (LIGHT) ── */
+  .hero {
+    background: var(--cream-hero);
+    padding: 80px 0 100px;
+    border-bottom: 1px solid var(--cream-2);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: 'B';
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 600px;
+    font-weight: 700;
+    color: rgba(196,150,96,0.045);
+    position: absolute;
+    right: -60px;
+    top: -100px;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+  .hero-grid { display: grid; grid-template-columns: 1fr 410px; gap: 60px; align-items: start; position: relative; z-index: 1; }
+
+  .live-badge {
+    display: inline-flex; align-items: center; gap: 9px;
+    background: rgba(41,181,173,0.10); border: 1px solid rgba(41,181,173,0.32);
+    color: var(--teal-deep); font-size: 10.5px; font-weight: 700; letter-spacing: 1.8px;
+    text-transform: uppercase; padding: 7px 15px; border-radius: 999px; margin-bottom: 30px;
+  }
+  .live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--red); animation: blink 1.5s ease-in-out infinite; }
+  @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+
+  h1.hero-title {
+    font-size: 60px; font-weight: 800; color: var(--dark-text);
+    line-height: 1.04; letter-spacing: -1px; margin-bottom: 26px;
+  }
+  h1.hero-title .gold-drop {
+    display: block; font-family: 'Playfair Display', serif; font-style: italic;
+    font-weight: 700; color: var(--gold); font-size: 78px; letter-spacing: -2px;
+    line-height: 0.96; margin-top: 4px;
+  }
+
+  .hero-desc { font-size: 16px; color: var(--mid-text); line-height: 1.74; max-width: 510px; margin-bottom: 34px; }
+
+  .hero-meta { font-size: 13px; font-weight: 600; color: var(--dark-text); margin-bottom: 36px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; opacity: 0.75; }
+  .hero-meta .sep { color: var(--teal); }
+
+  .cdown { display: flex; gap: 22px; }
+  .cd-u { text-align: center; }
+  .cd-n { font-family: 'Playfair Display', serif; font-style: italic; font-size: 44px; font-weight: 700; color: var(--dark-text); line-height: 1; display: block; padding-bottom: 8px; border-bottom: 2.5px solid var(--teal); min-width: 62px; letter-spacing: -1px; }
+  .cd-l { font-size: 9px; letter-spacing: 1.8px; text-transform: uppercase; color: var(--teal); margin-top: 8px; font-weight: 700; display: block; }
+
+  /* REGISTRATION CARD — dark on light hero */
+  .reg-card { border-radius: 20px; overflow: hidden; box-shadow: 0 32px 72px rgba(6,14,36,0.22), 0 8px 20px rgba(6,14,36,0.14); position: sticky; top: 92px; }
+  .rc-head { background: linear-gradient(150deg, var(--ink) 0%, var(--ink-800) 100%); padding: 28px 30px 24px; border-bottom: 2px solid rgba(41,181,173,0.55); }
+  .rc-tag { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+  .rc-tag::before { content: ''; width: 16px; height: 1.5px; background: var(--teal); }
+  .rc-title { font-family: 'Playfair Display', serif; font-style: italic; font-size: 28px; font-weight: 700; color: #fff; margin-bottom: 5px; }
+  .rc-sub { font-size: 12.5px; color: rgba(255,255,255,0.4); }
+  .rc-body { background: #fff; padding: 26px 30px 24px; }
+  .rc-body label { display: block; font-size: 11.5px; font-weight: 700; color: var(--mid-text); margin-bottom: 6px; }
+  .rc-body label .req { color: var(--red); }
+  .f-row { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin-bottom: 13px; }
+  .f-fld { margin-bottom: 13px; }
+  .rc-body input, .rc-body textarea { width: 100%; padding: 11px 14px; border-radius: 10px; border: 1.5px solid #DDD6CC; background: #F8F5F0; font-size: 13.5px; font-family: inherit; color: var(--dark-text); transition: border-color .2s, box-shadow .2s; }
+  .rc-body input:focus, .rc-body textarea:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(41,181,173,0.13); background: #fff; }
+  .rc-body textarea { resize: vertical; min-height: 72px; }
+  .rc-secure { text-align: center; font-size: 11px; color: #9AAAB8; margin: 10px 0 12px; }
+  .rc-btn { width: 100%; background: linear-gradient(135deg, var(--teal), var(--teal-deep)); color: #fff; border: none; padding: 15px; border-radius: 11px; font-size: 14.5px; font-weight: 700; cursor: pointer; font-family: inherit; box-shadow: 0 8px 24px rgba(41,181,173,0.3); transition: transform .15s, box-shadow .15s; }
+  .rc-btn:hover { transform: translateY(-1px); box-shadow: 0 12px 32px rgba(41,181,173,0.42); }
+
+  /* ── ABOUT (DARK) ── */
+  .about-section { background: var(--ink-800); padding: 96px 0; }
+  .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+  .ey { font-size: 11px; font-weight: 700; letter-spacing: 2.2px; text-transform: uppercase; color: var(--teal); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+  .ey::before { content: ''; width: 28px; height: 2px; background: var(--teal); flex-shrink: 0; }
+  .about-h { font-size: 36px; font-weight: 800; color: #fff; line-height: 1.14; letter-spacing: -0.4px; margin-bottom: 24px; }
+  .about-h em { font-family: 'Playfair Display', serif; font-style: italic; color: var(--gold); font-weight: 700; }
+  .about-p { font-size: 15px; color: rgba(255,255,255,0.58); line-height: 1.78; margin-bottom: 16px; }
+  .who-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09); border-radius: 16px; padding: 28px 32px; }
+  .who-card-label { font-size: 10.5px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 16px; }
+  .who-list { list-style: none; }
+  .who-list li { padding: 10px 0 10px 22px; position: relative; color: rgba(255,255,255,0.72); font-size: 14px; line-height: 1.5; border-top: 1px solid rgba(255,255,255,0.07); font-weight: 500; }
+  .who-list li:first-child { border-top: none; padding-top: 0; }
+  .who-list li::before { content: '✦'; position: absolute; left: 0; top: 10px; color: var(--gold); font-size: 10px; }
+
+  /* ── SPEAKERS (CREAM) ── */
+  .speakers-section { background: var(--cream); padding: 96px 0; }
+  .sec-head { text-align: center; margin-bottom: 56px; }
+  .sec-head .sey { font-size: 11px; font-weight: 700; letter-spacing: 2.2px; text-transform: uppercase; color: var(--teal); margin-bottom: 14px; }
+  .sec-head h2 { font-size: 42px; font-weight: 800; color: var(--dark-text); letter-spacing: -0.5px; line-height: 1.1; }
+  .sec-head h2 em { font-family: 'Playfair Display', serif; font-style: italic; color: var(--teal-deep); }
+  .sec-head .ssub { color: var(--mid-text); font-size: 16px; margin-top: 14px; max-width: 580px; margin-left: auto; margin-right: auto; }
+
+  .sp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 920px; margin: 0 auto; }
+  .sp-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.08); border: 1px solid var(--cream-2); transition: transform .2s, box-shadow .2s; }
+  .sp-card:hover { transform: translateY(-5px); box-shadow: 0 18px 48px rgba(0,0,0,0.13); }
+  .sp-img { width: 100%; height: 280px; overflow: hidden; }
+  .sp-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+  .sp-info { padding: 20px 22px 24px; border-top: 3px solid var(--teal); }
+  .sp-name { font-size: 18px; font-weight: 800; color: var(--dark-text); margin-bottom: 4px; }
+  .sp-role { font-size: 11px; font-weight: 700; color: var(--teal); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 12px; line-height: 1.4; }
+  .sp-bio { font-size: 13px; color: var(--mid-text); line-height: 1.6; }
+
+  /* ── KDP (DARK) ── */
+  .kdp-section { background: var(--ink); padding: 96px 0; }
+  .kdp-grid { display: grid; grid-template-columns: 1fr 1fr; max-width: 940px; margin: 0 auto; }
+  .kdp-item { padding-top: 44px; padding-bottom: 44px; padding-right: 48px; padding-left: 0; border-top: 1px solid rgba(255,255,255,0.08); display: flex; gap: 22px; align-items: flex-start; }
+  .kdp-item:nth-child(even) { padding-left: 48px; padding-right: 0; border-left: 1px solid rgba(255,255,255,0.08); }
+  .kdp-item:nth-child(3), .kdp-item:nth-child(4) { border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .kdp-n { font-family: 'Playfair Display', serif; font-style: italic; font-size: 60px; font-weight: 700; color: var(--gold); opacity: 0.55; line-height: 1; flex-shrink: 0; width: 52px; text-align: center; user-select: none; }
+  .kdp-text { padding-top: 8px; font-size: 16px; color: rgba(255,255,255,0.82); line-height: 1.65; font-weight: 500; }
+
+  /* ── CTA ── */
+  .cta-section {
+    background: var(--ink-800);
+    background-image: radial-gradient(ellipse 80% 100% at 50% 100%, rgba(41,181,173,0.16) 0%, transparent 65%);
+    padding: 96px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);
+  }
+  .cta-section h2 { font-size: 44px; font-weight: 800; color: #fff; margin-bottom: 14px; line-height: 1.12; letter-spacing: -0.5px; }
+  .cta-section h2 em { font-family: 'Playfair Display', serif; font-style: italic; color: var(--gold); }
+  .cta-section p { color: var(--muted); font-size: 16px; margin-bottom: 36px; }
+  .cta-link { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, var(--teal), var(--teal-deep)); color: #fff; text-decoration: none; padding: 18px 52px; border-radius: 999px; font-weight: 800; font-size: 16px; box-shadow: 0 16px 48px rgba(41,181,173,0.35); transition: transform .15s, box-shadow .15s; }
+  .cta-link:hover { transform: translateY(-2px); box-shadow: 0 20px 56px rgba(41,181,173,0.45); }
+
+  /* ── FOOTER ── */
+  footer { background: #050C1C; padding: 48px 0 32px; text-align: center; color: var(--muted); font-size: 13px; }
+  .foot-brand { font-weight: 800; font-size: 14px; color: var(--teal); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+  footer a { color: var(--teal); text-decoration: none; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1060px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 44px; }
+    .reg-card { position: static; }
+    h1.hero-title { font-size: 46px; }
+    h1.hero-title .gold-drop { font-size: 60px; }
+    .sec-head h2 { font-size: 32px; }
+    .cta-section h2 { font-size: 32px; }
+    .hero::before { display: none; }
+  }
+  @media (max-width: 820px) {
+    .about-inner { grid-template-columns: 1fr; gap: 36px; }
+    .about-h { font-size: 28px; }
+    .sp-grid { grid-template-columns: repeat(2, 1fr); max-width: 600px; }
+    .kdp-grid { grid-template-columns: 1fr; }
+    .kdp-item { padding-right: 0 !important; padding-left: 0 !important; border-left: none !important; }
+    .kdp-item:nth-child(3) { border-bottom: none; }
+    .kdp-item:last-child { border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .about-section, .speakers-section, .kdp-section, .cta-section { padding: 72px 0; }
+  }
+  @media (max-width: 600px) {
+    .wrap { padding: 0 20px; }
+    h1.hero-title { font-size: 34px; }
+    h1.hero-title .gold-drop { font-size: 46px; }
+    .hero { padding: 60px 0 72px; }
+    .cdown { gap: 14px; }
+    .cd-n { font-size: 34px; min-width: 50px; }
+    .f-row { grid-template-columns: 1fr; }
+    .sp-grid { grid-template-columns: 1fr; max-width: 360px; }
+    .cta-section h2 { font-size: 26px; }
+    .sec-head h2 { font-size: 26px; }
+    .kdp-n { font-size: 46px; }
+    .kdp-text { font-size: 14.5px; }
+  }
+</style>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wj760kkmt9");</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GX8NB1TKKD"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-GX8NB1TKKD');</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="https://www.businessofaesthetics.org/"><img src="../images/BOA%20Logo%20(3).png" alt="Business of Aesthetics" style="height:66px;display:block;" /></a>
+    <div class="nav-id">
+      <span class="e">Business of Aesthetics</span>
+      <span class="h">Expert Panel Webinar</span>
+      <div class="b"></div>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO: LIGHT ── -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="live-badge"><span class="live-dot"></span> Live Webinar &nbsp;·&nbsp; 3-Speaker Panel</div>
+      <h1 class="hero-title">
+        The Aesthetic Owner
+        <span class="gold-drop">Bottleneck.</span>
+      </h1>
+      <p class="hero-desc">Why your practice cannot grow past you — and the one shift that changes everything. How to identify when you are the constraint, what to release first, and how to build systems that let your practice thrive without you in the room.</p>
+      <div class="hero-meta">
+        <span>Tuesday, July 7, 2026</span>
+        <span class="sep">·</span>
+        <span>8:00 – 9:00 PM EST</span>
+        <span class="sep">·</span>
+        <span>Live Zoom + Q&amp;A</span>
+      </div>
+      <div class="cdown" id="countdown">
+        <div class="cd-u"><span class="cd-n" id="cd-d">--</span><span class="cd-l">Days</span></div>
+        <div class="cd-u"><span class="cd-n" id="cd-h">--</span><span class="cd-l">Hours</span></div>
+        <div class="cd-u"><span class="cd-n" id="cd-m">--</span><span class="cd-l">Mins</span></div>
+        <div class="cd-u"><span class="cd-n" id="cd-s">--</span><span class="cd-l">Secs</span></div>
+      </div>
+    </div>
+    <div class="reg-card" id="register">
+      <div class="rc-head">
+        <div class="rc-tag">Limited Seats Available</div>
+        <div class="rc-title">Reserve Your Spot</div>
+        <div class="rc-sub">Free to attend · Replay sent to all registrants</div>
+      </div>
+      <div class="rc-body">
+        <form id="reg-form" novalidate>
+          <input type="hidden" name="event_key" value="event_2026_07_07" />
+          <div class="f-row">
+            <div><label>First Name <span class="req">*</span></label><input type="text" name="first_name" placeholder="First name" autocomplete="given-name" required /></div>
+            <div><label>Last Name <span class="req">*</span></label><input type="text" name="last_name" placeholder="Last name" autocomplete="family-name" required /></div>
+          </div>
+          <div class="f-fld"><label>Email Address <span class="req">*</span></label><input type="email" name="email" placeholder="you@yourpractice.com" autocomplete="email" required /></div>
+          <div class="f-fld"><label>Mobile Number <span class="req">*</span></label><input type="tel" name="phone" placeholder="+1 (555) 123-4567" autocomplete="tel" required /></div>
+          <div class="f-fld"><label>What questions do you have? <span style="color:#9AAAB8;font-weight:400;">(optional)</span></label><textarea name="questions" placeholder="Share any questions you'd like the panel to address…"></textarea></div>
+          <div class="rc-secure">🔒 Your information is secure. We only contact you about this event.</div>
+          <button type="submit" class="rc-btn" id="reg-btn">Register Free — Save My Seat →</button>
+          <div id="reg-msg" style="display:none;margin-top:14px;padding:12px 16px;border-radius:10px;font-size:14px;font-weight:600;text-align:center;"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT: DARK ── -->
+<section class="about-section">
+  <div class="wrap">
+    <div class="about-inner">
+      <div>
+        <div class="ey">About The Session</div>
+        <h2 class="about-h">Most practices don't stall because of marketing — they stall because of <em>the owner</em></h2>
+        <p class="about-p">The practice grows exactly as large as one person's calendar, energy, and attention will allow — and no larger. Every meaningful decision still routes through the owner, and the team waits rather than leads.</p>
+        <p class="about-p">This session explores how to identify when you are the bottleneck, which responsibilities to release first, how to build systems that allow the practice to run without you in the room, and how to redirect reclaimed capacity toward genuine growth.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-card-label">Ideal For</div>
+        <ul class="who-list">
+          <li>Aesthetic practice owners who feel the weight of everything</li>
+          <li>MedSpa founders whose team can't act without their approval</li>
+          <li>Practice owners at any stage ready to break through a growth ceiling</li>
+          <li>Anyone who has considered selling because they're exhausted</li>
+          <li>Leaders building toward a practice that can run and scale without them</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SPEAKERS: CREAM ── -->
+<section class="speakers-section">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sey">Meet Your Expert Panel</div>
+      <h2>Three Leaders, <em>One Powerful</em> Conversation</h2>
+      <p class="ssub">Three practitioners who have lived the bottleneck — and built their way out of it — share what actually works in building a practice that grows beyond its owner.</p>
+    </div>
+    <div class="sp-grid">
+      <div class="sp-card">
+        <div class="sp-img"><img src="Terri Wojak.png" alt="Terri Wojak" /></div>
+        <div class="sp-info">
+          <div class="sp-name">Terri Wojak, LE</div>
+          <div class="sp-role">Owner · Aesthetics Exposed Education</div>
+          <p class="sp-bio">30+ years advancing skincare education and medical aesthetics. International speaker, industry consultant, and Amazon best-selling author of <em>Aesthetics Exposed</em>. Has developed over 100 training programs and 150+ published articles, empowering practitioners through evidence-based education and mentorship.</p>
+        </div>
+      </div>
+      <div class="sp-card">
+        <div class="sp-img"><img src="Robyn Sheppard.png" alt="Robyn Sheppard" /></div>
+        <div class="sp-info">
+          <div class="sp-name">Robyn Sheppard</div>
+          <div class="sp-role">Clinical Manager · Vydence Medical USA</div>
+          <p class="sp-bio">Clinical Manager with extensive experience in energy-based devices, aesthetic lasers, and advanced skincare technologies. Partners with KOLs, physicians, and advanced practitioners to drive clinical education, optimize treatment outcomes, and support the adoption of aesthetic technologies across the market.</p>
+        </div>
+      </div>
+      <div class="sp-card">
+        <div class="sp-img"><img src="Brittany Shipley.jpg" alt="Brittany Shipley" style="object-position: center 30%;" /></div>
+        <div class="sp-info">
+          <div class="sp-name">Brittany Shipley</div>
+          <div class="sp-role">Owner · Truessence Medical Spa</div>
+          <p class="sp-bio">Registered Nurse, Master Esthetician, and Medical Esthetician with 10+ years in aesthetics. After seven years alongside a plastic surgeon, she founded Spa SunDree and launched Women in the Trenches nonprofit. Now leads Truessence Medical Spa, focused on building sustainable systems that let practices grow beyond their owners.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── KDP: DARK ── -->
+<section class="kdp-section">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:52px;">
+      <div class="sey">Key Discussion Points</div>
+      <h2 style="color:#fff;">What You'll <em style="color:var(--gold);">Learn</em></h2>
+      <p class="ssub">Four focused themes our panel will unpack live — with time for your own questions during moderated Q&amp;A.</p>
+    </div>
+    <div class="kdp-grid">
+      <div class="kdp-item"><span class="kdp-n">01</span><p class="kdp-text">How to identify when the owner — not the team, tools, or market — is the true growth bottleneck in an aesthetic practice</p></div>
+      <div class="kdp-item"><span class="kdp-n">02</span><p class="kdp-text">The mindset and leadership shift required to move an aesthetic practice beyond owner-dependence</p></div>
+      <div class="kdp-item"><span class="kdp-n">03</span><p class="kdp-text">Which responsibilities to delegate first and how to build systems that create consistency without constant owner involvement</p></div>
+      <div class="kdp-item"><span class="kdp-n">04</span><p class="kdp-text">How to use the capacity created by delegation and systems to drive sustainable growth and long-term practice value</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section">
+  <div class="wrap">
+    <h2>Save Your Seat For <em>July 7th</em></h2>
+    <p>Free registration. Live Q&amp;A. Replay included.</p>
+    <a href="#register" class="cta-link">Reserve My Spot →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-brand">Business of Aesthetics</div>
+    <div>Your Success Matters!</div>
+    <div style="margin-top:16px;opacity:0.65;">© 2026 Business of Aesthetics. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxRuoBr8qUaBXwrwXgLwZSq-rVTS1aeeGDaR89F0zc2gx4M9c6dSaU4aGvxJCUxtGA7/exec';
+  const EVENT_KEY = 'event_2026_07_07';
+  const LOCAL_TEST_MODE = APPS_SCRIPT_URL.startsWith('REPLACE');
+  document.getElementById('reg-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target, btn = document.getElementById('reg-btn'), msg = document.getElementById('reg-msg');
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    const source_id = new URLSearchParams(window.location.search).get('s') || '';
+    const data = { event_key: form.event_key.value.trim() || EVENT_KEY, first_name: form.first_name.value.trim(), last_name: form.last_name.value.trim(), email: form.email.value.trim(), phone: form.phone.value.trim(), questions: form.questions.value.trim(), source_id, source_name: '' };
+    btn.disabled = true; btn.textContent = 'Registering…'; msg.style.display = 'none';
+    if (LOCAL_TEST_MODE) {
+      console.log('%c[LOCAL TEST] Payload:', 'color:#29B5AD;font-weight:bold;', data);
+      setTimeout(() => { msg.style.cssText = 'display:block;margin-top:14px;padding:12px 16px;border-radius:10px;font-size:14px;font-weight:600;text-align:center;background:#d4edda;color:#155724;border:1px solid #c3e6cb;'; msg.textContent = '✓ [TEST] Payload captured.'; btn.disabled = false; btn.textContent = 'Register Free — Save My Seat →'; form.reset(); }, 800);
+      return;
+    }
+    try {
+      await fetch(APPS_SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' }, body: JSON.stringify(data) });
+      form.querySelectorAll('input, textarea').forEach(i => i.disabled = true);
+      btn.disabled = true; btn.textContent = '✓ You\'re Registered!';
+      btn.style.background = 'linear-gradient(135deg,#28a745,#1e7e34)'; btn.style.boxShadow = '0 10px 30px rgba(40,167,69,0.35)';
+      msg.style.cssText = 'display:block;margin-top:14px;padding:12px 16px;border-radius:10px;font-size:14px;font-weight:600;text-align:center;background:#d4edda;color:#155724;border:1px solid #c3e6cb;';
+      msg.textContent = 'You\'re all set! Check your email for the Zoom confirmation link.';
+    } catch(err) {
+      msg.style.cssText = 'display:block;margin-top:14px;padding:12px 16px;border-radius:10px;font-size:14px;font-weight:600;text-align:center;background:#f8d7da;color:#721c24;border:1px solid #f5c6cb;';
+      msg.textContent = 'Something went wrong. Please try again or email us directly.';
+      btn.disabled = false; btn.textContent = 'Register Free — Save My Seat →';
+    }
+  });
+  const target = new Date('2026-07-08T00:00:00Z').getTime();
+  function tick() {
+    const diff = Math.max(0, target - Date.now());
+    document.getElementById('cd-d').textContent = String(Math.floor(diff/(1000*60*60*24))).padStart(2,'0');
+    document.getElementById('cd-h').textContent = String(Math.floor((diff/(1000*60*60))%24)).padStart(2,'0');
+    document.getElementById('cd-m').textContent = String(Math.floor((diff/(1000*60))%60)).padStart(2,'0');
+    document.getElementById('cd-s').textContent = String(Math.floor((diff/1000)%60)).padStart(2,'0');
+  }
+  tick(); setInterval(tick, 1000);
+  const _s = new URLSearchParams(window.location.search).get('s');
+  if (_s && typeof gtag === 'function') gtag('event', 'referral_visit', { source_id: _s });
+</script>
+</body>
+</html>
