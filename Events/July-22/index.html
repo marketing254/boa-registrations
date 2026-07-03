@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Global Trends in Dermatology &amp; Plastic Surgery 2026 | Business of Aesthetics | July 22</title>
-<meta name="description" content="A free 90-minute educational panel with four experts on the biggest clinical and business trends shaping dermatology, plastic surgery, and aesthetics in 2026. July 22, 2026, 8:00 PM EST." />
+<meta name="description" content="A free 60-minute educational panel with four experts on the biggest clinical and business trends shaping dermatology, plastic surgery, and aesthetics in 2026. July 22, 2026, 8:00 PM EST." />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -222,7 +222,7 @@
         <div class="info">
           <div class="info-time">Wednesday · 8:00 PM EST</div>
           <div class="info-tags">
-            <span class="tag">90-Minute Live Panel</span>
+            <span class="tag">60-Minute Live Panel</span>
             <span class="tag tag-free">Complimentary</span>
           </div>
         </div>
@@ -256,12 +256,11 @@
         <div class="f-fld"><label>Email Address <span class="req">*</span></label><input type="email" name="email" placeholder="you@yourpractice.com" autocomplete="email" required /></div>
         <div class="f-row">
           <div><label>Phone <span class="req">*</span></label><input type="tel" name="phone" placeholder="+1 (555) 123-4567" autocomplete="tel" required /></div>
-          <div><label>Job Title <span class="req">*</span></label><input type="text" name="job_title" placeholder="e.g. Practice Owner" required /></div>
+          <div><label>Practice Name <span class="req">*</span></label><input type="text" name="practice_name" placeholder="Your practice or business name" required /></div>
         </div>
-        <div class="f-fld"><label>Practice Name <span class="req">*</span></label><input type="text" name="practice_name" placeholder="Your practice or business name" required /></div>
         <div class="f-fld">
           <label>Role <span class="req">*</span></label>
-          <select name="role" id="role-select" required>
+          <select name="role" required>
             <option value="" disabled selected>Select your role…</option>
             <option>Medical Director</option>
             <option>Aesthetic Physician / Cosmetic Doctor</option>
@@ -272,23 +271,18 @@
             <option>Aesthetic Consultant</option>
             <option>Practice Manager</option>
             <option>Clinical Trainer</option>
-            <option>Practice Owner</option>
-            <option value="Other">Other</option>
+            <option>Practice owner</option>
           </select>
-        </div>
-        <div class="f-fld" id="role-other-fld" style="display:none;">
-          <label>Please specify your role <span class="req">*</span></label>
-          <input type="text" name="role_other" placeholder="Enter your role" />
         </div>
         <div class="f-fld">
           <label>How long have you been running your aesthetics business? <span class="req">*</span></label>
           <select name="business_duration" required>
             <option value="" disabled selected>Select one…</option>
-            <option value="Startup (Less than 1 year)">Startup — Less than 1 year</option>
-            <option value="Scaleup (1–2 years)">Scaleup — 1 to 2 years</option>
-            <option value="Growth (3–5 years)">Growth — 3 to 5 years</option>
-            <option value="Established (6–10 years)">Established — 6 to 10 years</option>
-            <option value="Veteran (More than 10 years)">Veteran — More than 10 years</option>
+            <option value="Startup (Less than 1 year)">Startup (Less than 1 year)</option>
+            <option value="Scaleup (1 to 2 years)">Scaleup (1 to 2 years)</option>
+            <option value="Growth (3 to 5 years)">Growth (3 to 5 years)</option>
+            <option value="Established (6 to 10 years)">Established (6 to 10 years)</option>
+            <option value="Veteran (More than 10 years)">Veteran (More than 10 years)</option>
           </select>
         </div>
         <div class="f-fld">
@@ -313,7 +307,7 @@
         <div class="kicker">About This Panel</div>
         <h2>Clinical innovation and patient behavior are <em>reshaping</em> aesthetics in 2026</h2>
         <p>Practices are seeing stronger interest in minimally invasive procedures, regenerative approaches, hybrid treatment plans, and more personalized care pathways. At the same time, patients are researching more deeply, comparing providers more carefully, and expecting both clinical credibility and a seamless experience before they ever book a consultation.</p>
-        <p>In this 90-minute educational panel, four experts explore the biggest trends affecting dermatology, plastic surgery, and the broader aesthetics market — and what they mean for the way you practice and grow.</p>
+        <p>In this 60-minute educational panel, four experts explore the biggest trends affecting dermatology, plastic surgery, and the broader aesthetics market — and what they mean for the way you practice and grow.</p>
       </div>
       <div class="who">
         <div class="who-s">Who Should Attend</div>
@@ -419,17 +413,6 @@
   const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxRuoBr8qUaBXwrwXgLwZSq-rVTS1aeeGDaR89F0zc2gx4M9c6dSaU4aGvxJCUxtGA7/exec';
   const EVENT_KEY = 'event_2026_07_22';
   const LOCAL_TEST_MODE = APPS_SCRIPT_URL.startsWith('REPLACE');
-
-  // Show the "specify your role" input only when Other is selected
-  const roleSelect = document.getElementById('role-select');
-  const roleOtherFld = document.getElementById('role-other-fld');
-  const roleOtherInput = roleOtherFld.querySelector('input');
-  roleSelect.addEventListener('change', function() {
-    const isOther = roleSelect.value === 'Other';
-    roleOtherFld.style.display = isOther ? 'block' : 'none';
-    roleOtherInput.required = isOther;
-    if (!isOther) roleOtherInput.value = '';
-  });
   document.getElementById('reg-form').addEventListener('submit', async function(e) {
     e.preventDefault();
     const form = e.target, btn = document.getElementById('reg-btn'), msg = document.getElementById('reg-msg');
@@ -441,8 +424,7 @@
       last_name: form.last_name.value.trim(),
       email: form.email.value.trim(),
       phone: form.phone.value.trim(),
-      job_title: form.job_title.value.trim(),
-      role: form.role.value === 'Other' ? form.role_other.value.trim() : form.role.value,
+      role: form.role.value,
       practice_name: form.practice_name.value.trim(),
       business_duration: form.business_duration.value,
       text_reminder: (form.text_reminder.value || ''),
