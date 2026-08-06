@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/png" href="../images/BOA%20Logo%20(3).png" />
 <title>The Retention Pattern Hidden in a Busy Schedule | Business of Aesthetics | August 18</title>
 <meta name="description" content="A free live panel for aesthetic practice owners on the retention pattern hidden inside a busy schedule — the metrics, the leading indicators, and how to build retention into your practice. August 18, 2026, 8:00 PM EST." />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -290,9 +291,9 @@
   <div class="wrap">
     <div class="sec-head">
       <div class="kicker">Your Expert Panel</div>
-      <h2>Two Voices, <em>One Conversation</em></h2>
+      <h2>Three Voices, <em>One Conversation</em></h2>
       <div class="rule"></div>
-      <p>A retention-tech founder and a longevity-focused esthetician on what actually keeps patients coming back.</p>
+      <p>A retention-tech founder, a longevity-focused esthetician, and an aesthetics educator on what actually keeps patients coming back.</p>
     </div>
 
     <div class="sp-row rev">
@@ -312,6 +313,16 @@
         <div class="sp-name">Frances Vincen-Brown, LE</div>
         <div class="sp-role">Licensed Esthetician &amp; Co-Owner · Massage &amp; Skin Care Solutions</div>
         <p class="sp-bio">A licensed esthetician for 18 years and co-owner of Massage &amp; Skin Care Solutions LLC in Boise, Idaho. Creator of Zombie Cell Esthetics — an NCEA-accredited continuing-education course on cellular senescence — and a contracted educator for Procell Therapies and 7eWellness. She contributes to Dermascope and is co-developing an esthetician education platform that translates longevity science into practical, client-ready protocols: a cellular-level understanding of the skin that drives long-term patient retention.</p>
+      </div>
+    </div>
+
+    <div class="sp-row rev">
+      <div class="sp-portrait"><div class="frame"><img src="Cassie%20Pool.jpg" alt="Cassie Poole" /></div></div>
+      <div class="sp-body">
+        <span class="sp-num goldtext">Speaker 03</span>
+        <div class="sp-name">Cassie Poole</div>
+        <div class="sp-role">Founder &amp; Educational Director · Florence Foundations</div>
+        <p class="sp-bio">Founder and Educational Director of Florence Foundations, with more than 15 years in medical aesthetics spanning clinical practice, operations, consultative sales, curriculum development, and education. She believes exceptional consultations begin with genuine human connection — strengthened by a deep understanding of aesthetic technologies, injectables, and surgical interventions — and teaches providers to guide patients with clarity, build lasting trust, and create meaningful treatment journeys that benefit both patients and the clinics they serve.</p>
       </div>
     </div>
   </div>
@@ -373,7 +384,7 @@
     btn.disabled = true; btn.textContent = 'Registering…'; msg.style.display = 'none';
     if (LOCAL_TEST_MODE) { console.log('%c[LOCAL TEST] Payload:', 'color:#E4C580;font-weight:bold;', data); setTimeout(() => { msg.style.cssText = 'display:block;margin-top:14px;padding:12px 16px;border-radius:10px;font-size:14px;font-weight:600;text-align:center;background:#d4edda;color:#155724;border:1px solid #c3e6cb;'; msg.textContent = '✓ [TEST] Payload captured.'; btn.disabled = false; btn.textContent = 'Reserve My Complimentary Seat →'; form.reset(); }, 800); return; }
     try {
-      await fetch(APPS_SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' }, body: JSON.stringify(data) });
+      fetch(APPS_SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' }, body: JSON.stringify(data), keepalive: true }).catch(function(){});
       form.querySelectorAll('input, select, textarea').forEach(i => i.disabled = true);
       btn.disabled = true; btn.textContent = '✓ You\'re Registered!';
       btn.style.background = 'linear-gradient(135deg,#28a745,#1e7e34)'; btn.style.color = '#fff'; btn.style.boxShadow = '0 10px 30px rgba(40,167,69,0.35)';

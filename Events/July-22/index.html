@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/png" href="../../images/BOA%20Logo%20(3).png" />
 <title>Global Trends in Dermatology &amp; Plastic Surgery 2026 | Business of Aesthetics | July 22</title>
 <meta name="description" content="A free 60-minute educational panel with four experts on the biggest clinical and business trends shaping dermatology, plastic surgery, and aesthetics in 2026. July 22, 2026, 8:00 PM EST." />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -413,7 +414,7 @@
     btn.disabled = true; btn.textContent = 'Registering…'; msg.style.display = 'none';
     if (LOCAL_TEST_MODE) { console.log('%c[LOCAL TEST] Payload:', 'color:#E4C580;font-weight:bold;', data); setTimeout(() => { msg.style.cssText = 'display:block;margin-top:14px;padding:12px 16px;border-radius:10px;font-size:14px;font-weight:600;text-align:center;background:#d4edda;color:#155724;border:1px solid #c3e6cb;'; msg.textContent = '✓ [TEST] Payload captured.'; btn.disabled = false; btn.textContent = 'Reserve My Complimentary Seat →'; form.reset(); }, 800); return; }
     try {
-      await fetch(APPS_SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' }, body: JSON.stringify(data) });
+      fetch(APPS_SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' }, body: JSON.stringify(data), keepalive: true }).catch(function(){});
       form.querySelectorAll('input, select').forEach(i => i.disabled = true);
       btn.disabled = true; btn.textContent = '✓ You\'re Registered!';
       btn.style.background = 'linear-gradient(135deg,#28a745,#1e7e34)'; btn.style.color = '#fff'; btn.style.boxShadow = '0 10px 30px rgba(40,167,69,0.35)';
