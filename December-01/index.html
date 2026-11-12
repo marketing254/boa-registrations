@@ -253,8 +253,9 @@
         <div class="f-fld"><label>Email Address <span class="req">*</span></label><input type="email" name="email" placeholder="you@yourpractice.com" autocomplete="email" required /></div>
         <div class="f-row">
           <div><label>Phone <span class="req">*</span></label><input type="tel" name="phone" placeholder="+1 (555) 123-4567" autocomplete="tel" required /></div>
-          <div><label>Practice Name <span class="req">*</span></label><input type="text" name="practice_name" placeholder="Your practice name" required /></div>
+          <div><label>Job Title <span class="req">*</span></label><input type="text" name="job_title" placeholder="e.g. Practice Owner" autocomplete="organization-title" required /></div>
         </div>
+        <div class="f-fld"><label>Practice Name / Website <span class="req">*</span></label><input type="text" name="practice_name" placeholder="Practice name or website" required /></div>
         <div class="f-fld"><label>What questions do you have? <span class="opt">(optional)</span></label><textarea name="questions" placeholder="Anything you'd like the panel to address…"></textarea></div>
         <div class="reg-secure">&#x1F512; Your information is secure. We only contact you about this event.</div>
         <button type="submit" class="reg-btn" id="reg-btn">Reserve My Complimentary Seat &rarr;</button>
@@ -367,6 +368,7 @@
       last_name: form.last_name.value.trim(),
       email: form.email.value.trim(),
       phone: form.phone.value.trim(),
+      job_title: form.job_title.value.trim(),
       practice_name: form.practice_name.value.trim(),
       questions: form.questions.value.trim(),
       source_id, source_name: ''
